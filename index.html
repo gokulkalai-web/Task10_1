@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Village</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .Topbar {
+        width: 100vw;
+        height: 60px;
+        background-color: rgb(108, 29, 234);
+      }
+
+      .Topbar-content {
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
+        margin-top: 15px;
+        width: calc(100% - 70vw);
+        justify-content: space-around;
+      }
+
+      .Topbar-content > a {
+        text-decoration: none;
+        color: white;
+        font-size: large;
+      }
+
+      .Title {
+        float: left !important;
+        color: white;
+        margin-left: 10px;
+        margin-top: -5px;
+      }
+
+      @media screen and (max-width: 650px) {
+        .Topbar-content {
+          width: calc(100% - 50vw) !important;
+        }
+
+        .dog,
+        .cat,
+        img {
+          width: 200px !important;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .Topbar-content {
+          width: calc(100% - 40vw) !important;
+        }
+
+        .dog,
+        .cat,
+        img {
+          width: 150px !important;
+        }
+      }
+
+      @media screen and (max-width: 300px) {
+        .Title {
+          display: none;
+        }
+
+        .Topbar-content {
+          width: calc(100% - 25vw) !important;
+        }
+
+        .mainContent {
+          text-align: center !important;
+        }
+
+        .dog,
+        .cat,
+        img {
+          width: 100px !important;
+        }
+      }
+
+      .mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 80vh;
+      }
+
+      .dog,
+      .cat {
+        display: none;
+        border: 2px solid black;
+        height: 300px;
+        width: 300px;
+      }
+
+      img {
+        height: 300px;
+        width: 300px;
+      }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 15px;
+        width: 100%;
+        color: white;
+        text-align: center;
+      }
+      .btn {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Topbar">
+      <div class="Title">
+        <h3>Pet Village</h3>
+      </div>
+      <div class="Topbar-content">
+        <a href="#" class="home">Home</a>
+        <a href="#" class="Pets">Pets</a>
+        <a href="#" class="contact">Contact</a>
+      </div>
+    </div>
+    <div class="mainContent">
+      <h2><i>Welcome to Pet Village Shop....</i></h2>
+      <h3>Lets Explore Pets....</h3>
+      <div class="dog">
+        <img src="" alt="" />
+      </div>
+      <div class="cat">
+        <img src="" alt="" />
+      </div>
+    </div>
+    <div class="footer">
+      <button type="button" class="btn">Explore more pets</button>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
